@@ -61,27 +61,32 @@
             <div class="form-group">
               <label for="first-name">First Name:</label>
               <input type="text" id="first-name" name="first_name" required>
+              <small class="error-message" id="first-name-error">Please enter your first name.</small>
             </div>
             <div class="form-group">
               <label for="last-name">Last Name:</label>
               <input type="text" id="last-name" name="last_name" required>
+              <small class="error-message" id="last-name-error">Please enter your last name.</small>
             </div>
           </div>
           <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            <small class="error-message" id="email-error">Please enter a valid email address.</small>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="start-date">Available Start Date:</label>
               <input type="date" id="start-date" name="start_date" required>
+              <small class="error-message" id="start-date-error">Please select a start date.</small>
             </div>
+            <p>Please note: The event lasts one day. Select the dates you are available to attend.</p>
             <div class="form-group">
               <label for="end-date">Available End Date:</label>
               <input type="date" id="end-date" name="end_date" required>
+              <small class="error-message" id="end-date-error">Please select an end date.</small>
             </div>
           </div>
-          <p>Please note: The event lasts one day. Select the dates you are available to attend.</p>
           <div class="form-group">
             <label>How comfortable are you in new environments?</label>
             <select name="comfort_new_environments" required>
@@ -97,6 +102,7 @@
               <option value="9">9</option>
               <option value="10">10 - Very comfortable</option>
             </select>
+            <small class="error-message" id="comfort_new_environments-error">Please select an option.</small>
           </div>
           <div class="form-group">
             <label>How comfortable are you trying new foods?</label>
@@ -113,6 +119,7 @@
               <option value="9">9</option>
               <option value="10">10 - Very comfortable</option>
             </select>
+            <small class="error-message" id="comfort_new_foods-error">Please select an option.</small>
           </div>
           <div class="form-group">
             <label>How much do you enjoy stepping out of your comfort zone?</label>
@@ -129,26 +136,12 @@
               <option value="9">9</option>
               <option value="10">10 - Very much</option>
             </select>
+            <small class="error-message" id="enjoy_stepping_out_comfort_zone-error">Please select an option.</small>
           </div>
           <div class="form-group">
             <label for="dietary-restrictions">Do you have any dietary restrictions?</label>
             <textarea id="dietary-restrictions" name="dietary_restrictions" rows="4" required></textarea>
-          </div>
-          <div class="form-group">
-            <label>How open are you to experiences out of your comfort zone?</label>
-            <select name="open_to_new_experiences" required>
-              <option value="" disabled selected>Select</option>
-              <option value="1">1 - Not open</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 - Neutral</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10 - Very open</option>
-            </select>
+            <small class="error-message" id="dietary-restrictions-error">Please enter any dietary restrictions.</small>
           </div>
           <div class="form-group">
             <label>On a scale of 1-10, how much do you identify with the following quote:</label>
@@ -166,6 +159,7 @@
               <option value="9">9</option>
               <option value="10">10 - Completely</option>
             </select>
+            <small class="error-message" id="identify_with_quote-error">Please select an option.</small>
           </div>
           <button type="submit">Submit Application</button>
         </form>
