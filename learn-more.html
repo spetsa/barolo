@@ -52,31 +52,124 @@
 
     <!-- landing-page-grid CSS can be found in the file "landing-page-grid"-->
     <div class="landing-page-grid">
-      <h3 class="form-card-header">
-        One of our Authority Title / Industry Experts will get back to you asap.
-      </h3>
 
-      <!-- all form related css can be found in the file "form-style"-->
-      <div class="form-card">
-        <form
-          method="POST"
-          action="thank-you.html"
-        >
-          <label for="fname">First Name *</label><br />
-          <input type="text" id="fname" name="fname" required /><br />
-          <label for="lname">Last Name *</label><br />
-          <input type="text" id="lname" name="lname" required /><br />
-          <label for="email">Company Email *</label><br />
-          <input type="email" id="email" name="email" required /><br />
-          <label for="phone">Phone *</label><br />
-          <input type="tel" id="phone" name="phone" required /><br /><br />
-          <a href="/thank-you.html">  
-            <input type="submit" value="Submit" class="btn-form-card" /><br />
-          </a>
+
+      <div class="application-form">
+        <h2>Apply for a Tour</h2>
+        <form id="tour-application" action="submit_application.php" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first_name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last_name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="start-date">Available Start Date:</label>
+              <input type="date" id="start-date" name="start_date" required>
+            </div>
+            <div class="form-group">
+              <label for="end-date">Available End Date:</label>
+              <input type="date" id="end-date" name="end_date" required>
+            </div>
+          </div>
+          <p>Please note: The event lasts one day. Select the dates you are available to attend.</p>
+          <div class="form-group">
+            <label>How comfortable are you in new environments?</label>
+            <select name="comfort_new_environments" required>
+              <option value="" disabled selected>Select</option>
+              <option value="1">1 - Not comfortable</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 - Neutral</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10 - Very comfortable</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>How comfortable are you trying new foods?</label>
+            <select name="comfort_new_foods" required>
+              <option value="" disabled selected>Select</option>
+              <option value="1">1 - Not comfortable</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 - Neutral</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10 - Very comfortable</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>How much do you enjoy stepping out of your comfort zone?</label>
+            <select name="enjoy_stepping_out_comfort_zone" required>
+              <option value="" disabled selected>Select</option>
+              <option value="1">1 - Not at all</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 - Neutral</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10 - Very much</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dietary-restrictions">Do you have any dietary restrictions?</label>
+            <textarea id="dietary-restrictions" name="dietary_restrictions" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>How open are you to experiences out of your comfort zone?</label>
+            <select name="open_to_new_experiences" required>
+              <option value="" disabled selected>Select</option>
+              <option value="1">1 - Not open</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 - Neutral</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10 - Very open</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>On a scale of 1-10, how much do you identify with the following quote:</label>
+            <blockquote>“Life should not be a journey to the grave with the intention of arriving safely in a pretty and well preserved body, but rather to skid in broadside in a cloud of smoke, thoroughly used up, totally worn out, and loudly proclaiming 'Wow!'</blockquote>
+            <select name="identify_with_quote" required>
+              <option value="" disabled selected>Select</option>
+              <option value="1">1 - Not at all</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 - Neutral</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10 - Completely</option>
+            </select>
+          </div>
+          <button type="submit">Submit Application</button>
         </form>
       </div>
-
-      <br/>
 
 
       <!-- Uncomment the code below for third party form injection -->
