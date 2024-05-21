@@ -179,8 +179,10 @@
               mode: 'no-cors',
             });
       
-            if (response) {
+            if (response.ok || response.type === 'opaque') {
               window.location.href = 'https://untamedjourneys.com/thank-you';
+            } else {
+              throw new Error('Network response was not ok.');
             }
           } catch (error) {
             alert('There was an error submitting your application. Please try again.');
