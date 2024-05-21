@@ -56,7 +56,7 @@
 
       <div class="application-form">
         <h2>Apply for a Tour</h2>
-        <form id="tour-application" action="https://docs.google.com/forms/d/e/1FAIpQLSfKQxpxc58SEloXDGvj_T3gvQzCyN3SvXBgMor5C5CruB8qjA/formResponse" method="POST">
+        <form id="tour-application" onsubmit="submitForm(event)">
           <div class="form-row">
             <div class="form-group">
               <label for="first-name">First Name:</label>
@@ -164,6 +164,31 @@
           <button type="submit">Submit Application</button>
         </form>
       </div>
+      
+      <script>
+        async function submitForm(event) {
+          event.preventDefault();
+          const form = document.getElementById('tour-application');
+          const data = new FormData(form);
+          const action = form.action;
+      
+          try {
+            const response = await fetch(action, {
+              method: 'POST',
+              body: data,
+              mode: 'no-cors',
+            });
+      
+            if (response) {
+              alert('Your application has been submitted successfully!');
+              form.reset();
+            }
+          } catch (error) {
+            alert('There was an error submitting your application. Please try again.');
+          }
+        }
+      </script>
+      
       
 
 
